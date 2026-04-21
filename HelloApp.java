@@ -4,18 +4,16 @@ public class HelloApp {
         StringBuilder sb = new StringBuilder();
 
         if (args.length == 0) {
-            sb.append("World");
-        } else {
-            boolean f = true;
-            for (String n : args) {
-                if (!f) {
-                    sb.append(", ");
-                }
-                sb.append(n);
-                f = false;
-            }
+            System.out.println("Hello, World!");
+            return;
         }
 
-        System.out.println("Hello, " + sb + "!");
+        for (String n : args) {
+            sb.append(n).append(", ");
+        }
+
+        String s = sb.substring(0, sb.length() - 2);
+
+        System.out.println("Hello, " + s + "!");
     }
 }
